@@ -6,17 +6,17 @@ const student = {username: 'student', password: 'Student1!!'}
 /**
  * This story opens a new browser window, goes to google.com, and searches for a pizza.
  */
-//story('Student fills out a question with multiple choices, chooses two answers.', function () {
-//  let s = new SeleniumSession().start('http://127.0.0.1/')
-//  s.goToLoginPage()
-//  s.writeLoginData({username: student.username, password: student.password})
-//  s.goToCourses()
-//  s.goToTestCourse()
-//  s.goToTestQuiz()
-//  s.startQuiz()
-//  s.markTwoAnswersInQuiz()
-//  s.submitQuiz()
-//})
+story('Student fills out a question with multiple choices, chooses two answers.', function () {
+  let s = new SeleniumSession().start('http://127.0.0.1/')
+  s.goToLoginPage()
+  s.writeLoginData({username: student.username, password: student.password})
+  s.goToCourses()
+  s.goToTestCourse()
+  s.goToTestQuiz()
+  s.startQuiz()
+  s.markTwoAnswersInQuiz()
+  s.submitQuiz()
+})
 
 /**
  * Teacher changes question type to single answer.
