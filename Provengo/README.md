@@ -17,7 +17,7 @@ For a full documentation go to [https://docs.provengo.tech](https://docs.proveng
 1. We started by creating the [story files](moodle/spec/js/RunTest.story.js).
 2. We then ran the following command to generate the test model:
 ```shell
-provengo analyze -f PDF moodle   
+provengo analyze -f pdf moodle   
 ```
 3. We repeated steps 1-2 until we were satisfied with the generated model.
 4. We added [Event definitions](moodle/spec/js/RunTest.EventDef.js) to define how the stories actuate the website using Selenium.
@@ -26,7 +26,7 @@ provengo analyze -f PDF moodle
 provengo run --show-sessions moodle
 ```
 6. We repeated steps 4-5 until we were satisfied with the result.
-7. We recorded a video of the running tests and added it to the report. Since more than one browser session was opened, we recorded the entire screen. The link for the video is [here](Untitled2.mp4).
+7. We recorded a video of the running tests and added it to the report. Since more than one browser session was opened, we recorded the entire screen. The link for the video is [Untitled2.mp4](Untitled2.mp4).
 8. We copied the generated graph of the model to a file named [model.pdf](model.pdf) inside this directory (the link should work).
 
 ### Story files
