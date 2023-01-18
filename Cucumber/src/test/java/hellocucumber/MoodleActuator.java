@@ -19,7 +19,7 @@ public class MoodleActuator {
     private WebDriverWait wait;
     public void initSession(String webDriver, String path){
         // webDriver = "webdriver.chrome.driver"
-        // path = "C:\\Users\\eylon\\Downloads\\chromedriver_win32\\chromedriver.exe";
+        // path = "C:\University\Year C\Semester A\qa_course\assignment3\sqe-hw3\Selenium\chromedriver.exe";
         System.setProperty(webDriver, path);
 
         // new chrome driver object
@@ -61,6 +61,6 @@ public class MoodleActuator {
 
     public void selectQuiz() {
         // select the quiz
-        driver.findElement(By.linkText("Attempt quiz")).click();
+        driver.findElement(By.xpath("btn btn-primary")).click();
     }
 }
