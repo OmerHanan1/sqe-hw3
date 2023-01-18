@@ -58,4 +58,9 @@ public class MoodleActuator {
         // navigate to the quiz page url
         driver.get("http://127.0.0.1/mod/quiz/view.php?id=2");
     }
+
+    public void selectQuiz() {
+        // select the quiz
+        driver.findElement(By.linkText("Attempt quiz")).click();
+    }
 }

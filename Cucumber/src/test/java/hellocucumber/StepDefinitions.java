@@ -49,7 +49,7 @@ public class StepDefinitions {
 
     @And("user select the quiz")
     public void userSelectTheQuiz() {
-        
+        moodle.selectQuiz();
     }
 
     @And("user answer the question")
