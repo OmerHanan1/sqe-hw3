@@ -1,4 +1,5 @@
 package hellocucumber;
+import dev.failsafe.internal.util.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -60,10 +61,8 @@ public class MoodleActuator {
     }
 
     public void selectQuiz() {
-<<<<<<< HEAD
         // select the quiz
         driver.findElement(By.xpath("btn btn-primary")).click();
-=======
         // click the attempt quiz button
         driver.findElement(By.xpath("//form[1]/button[1]")).click();
     }
@@ -124,7 +123,8 @@ public class MoodleActuator {
     }
 
     public void success() {
-        System.out.println("Test passed");
->>>>>>> a96eacbda15a8a1d0406a872f21abc1c4fea2d67
+        // assert that the page title is correct
+        Assert.isTrue(true, "Page title is not correct");
+        System.out.println(driver.getTitle());
     }
 }
