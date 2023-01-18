@@ -54,16 +54,17 @@ public class StepDefinitions {
 
     @And("user answer the question")
     public void userAnswerTheQuestion() {
-        
+        moodle.answerQuestion();
     }
 
     @And("user submit the answer")
     public void userSubmitTheAnswer() {
+        moodle.submitAnswer();
     }
 
     @And("user edit the quiz question type")
     public void userEditTheQuizQuestionType() {
-
+        moodle.editQuizQuestionType();
     }
 
     @And("user save the quiz")
@@ -76,7 +77,7 @@ public class StepDefinitions {
 
     @Then("message displayed submit successfully")
     public void messageDisplayedSubmitSuccessfully() {
-        
+        moodle.submittedsuccessfully();
     }
 
     @Then("message displayed save successfully")

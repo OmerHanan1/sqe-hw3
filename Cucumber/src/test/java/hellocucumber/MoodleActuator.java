@@ -1,8 +1,5 @@
 package hellocucumber;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.WindowType;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -62,5 +59,57 @@ public class MoodleActuator {
     public void selectQuiz() {
         // click the attempt quiz button
         driver.findElement(By.xpath("//button[@type=\"submit\"]")).click();
+    }
+
+    public void answerQuestion() {
+//        driver.findElement(By.xpath("//div[1]/div[1]/input[2]")).click();
+        driver.findElement(By.xpath("//div[1]/div[2]/input[2]")).click();
+    }
+
+    public void submitAnswer() {
+        driver.findElement(By.xpath("//form[1]/div[1]/div[2]/input[1]")).click();
+        driver.findElement(By.xpath("//div[5]/div[1]/div[1]/form[1]/button[1]")).click();
+        // click sends enter key
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[5]/div[3]/div/div[2]/div/div[2]/input[1]")));
+        WebElement confirm = driver.findElement(By.xpath("/html/body/div[5]/div[3]/div/div[2]/div/div[2]/input[1]"));
+        confirm.sendKeys(Keys.ENTER);
+    }
+
+    public void submittedsuccessfully() {
+        driver.findElement(By.xpath("//body/div[3]/div[5]/div[1]\n")).click();
+        driver.findElement(By.xpath("//div[1]/section[1]/div[2]/div[1]/a[1]\n")).click();
+    }
+
+    public void editQuizQuestionType() {
+        driver.get("http://127.0.0.1/mod/quiz/edit.php?cmid=2");
+        driver.findElement(By.xpath("//div[1]/div[2]/a[1]/span[1]/span[1]\n")).click();
+        WebElement choices = driver.findElement(By.xpath("//div[9]/div[2]/select[1]"));
+        choices.sendKeys(Keys.DOWN);
+        choices.sendKeys(Keys.ENTER);
+
+        WebElement grade = driver.findElement(By.xpath("//div[2]/div[2]/select[1]"));
+        grade.sendKeys(Keys.UP);
+        grade.sendKeys(Keys.UP);
+        grade.sendKeys(Keys.UP);
+        grade.sendKeys(Keys.UP);
+        grade.sendKeys(Keys.UP);
+        grade.sendKeys(Keys.UP);
+        grade.sendKeys(Keys.UP);
+        grade.sendKeys(Keys.UP);
+        grade.sendKeys(Keys.ENTER);
+
+        WebElement defaultgrade = driver.findElement(By.xpath("//fieldset[2]/div[2]/div[5]/div[2]/select[1]"));
+        defaultgrade.sendKeys(Keys.UP);
+        defaultgrade.sendKeys(Keys.UP);
+        defaultgrade.sendKeys(Keys.UP);
+        defaultgrade.sendKeys(Keys.UP);
+        defaultgrade.sendKeys(Keys.UP);
+        defaultgrade.sendKeys(Keys.UP);
+        defaultgrade.sendKeys(Keys.UP);
+        defaultgrade.sendKeys(Keys.UP);
+        defaultgrade.sendKeys(Keys.UP);
+        defaultgrade.sendKeys(Keys.ENTER);
+        
+        driver.findElement(By.xpath("//div[4]/div[2]/fieldset[1]/div[1]/div[1]/span[1]/input[1]")).click();
     }
 }
