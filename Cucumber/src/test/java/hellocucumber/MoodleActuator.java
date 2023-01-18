@@ -45,4 +45,21 @@ public class MoodleActuator {
          */
         System.out.println("Driver setup finished for - " + driver.getTitle());
     }
+
+    public void login(String username, String password)
+    {
+        driver.findElement(By.linkText("Log in")).click();
+        driver.findElement(By.id("username")).sendKeys(username);
+        driver.findElement(By.id("password")).sendKeys(password);
+        driver.findElement(By.id("loginbtn")).click();
+    }
+
+    public void navigateToQuiz(){
+        driver.findElement(By.linkText("My courses")).click();
+        // click on the first course "testCourse" twice
+        driver.findElement(By.linkText("testCourse")).click();
+        // wait until the page is loaded
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("testQuiz")));
+        driver.findElement(By.linkText("testQuiz")).click();
+    }
 }

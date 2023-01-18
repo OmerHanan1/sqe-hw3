@@ -32,13 +32,19 @@ public class StepDefinitions {
         moodleInit();
     }
 
-    @When("user is logging in")
-    public void userIsLoggingIn() {
-        
+    @When("student is logging in")
+    public void studentIsLoggingIn() {
+        moodle.login(STUDENT_USERNAME, STUDENT_PASSWORD);
+    }
+
+    @When("admin is logging in")
+    public void adminIsLoggingIn() {
+        moodle.login(TEACHER_USERNAME, TEACHER_PASSWORD);
     }
 
     @And("user navigate to the quiz page")
     public void userNavigateToTheQuizPage() {
+        moodle.navigateToQuiz();
     }
 
     @And("user select the quiz")

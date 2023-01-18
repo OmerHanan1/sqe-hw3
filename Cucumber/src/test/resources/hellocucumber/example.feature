@@ -2,7 +2,7 @@ Feature: A set of scenarios for testing the "example" module
 
   Scenario: Student fills out a question with multiple choices, chooses two answers.
     Given user is on homepage
-    When user is logging in
+    When student is logging in
     And user navigate to the quiz page
     And user select the quiz
     And user answer the question
@@ -11,7 +11,7 @@ Feature: A set of scenarios for testing the "example" module
 
   Scenario: Teacher changes question type to single answer.
     Given user is on homepage
-    When user is logging in
+    When admin is logging in
     And user navigate to the quiz page
     And user edit the quiz question type
     And user save the quiz
