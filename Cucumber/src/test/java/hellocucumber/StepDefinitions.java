@@ -16,7 +16,7 @@ public class StepDefinitions {
     private static List<MoodleActuator> allMoodles;
     private static MoodleActuator moodle;
     private String webDriver = "webdriver.chrome.driver";
-    private String path = "C:\\Users\\eylon\\Downloads\\chromedriver_win32\\chromedriver.exe";
+    private String path = "C:\\Users\\omerm\\IdeaProjects\\sqe-hw3\\Selenium\\chromedriver.exe";
     public void moodleInit() {
         System.out.println("--------------- INITIALIZING MOODLE TEST - OPENING WEBPAGE ---------------");
         if(allMoodles == null){
@@ -29,7 +29,7 @@ public class StepDefinitions {
 
     @Given("user is on homepage")
     public void userIsOnHomepage() {
-        
+        moodleInit();
     }
 
     @When("user is logging in")
