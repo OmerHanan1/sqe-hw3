@@ -4,21 +4,27 @@ import io.cucumber.java.en.*;
 
 import org.junit.jupiter.api.Assertions.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class StepDefinitions {
 
-    // $$*TODO* explain what this step does$$
-    @Given("an example scenario")
-    public void anExampleScenario() {
-    }
-
-    // $$*TODO* explain what this step does$$
-    @When("all step definitions are implemented")
-    public void allStepDefinitionsAreImplemented() {
-    }
-
-    // $$*TODO* explain what this step does$$
-    @Then("the scenario passes")
-    public void theScenarioPasses() {
+    private String TEACHER_USERNAME = "admin";
+    private String TEACHER_PASSWORD = "Admin1!!";
+    private String STUDENT_USERNAME = "student";
+    private String STUDENT_PASSWORD = "Student1!!";
+    private static List<MoodleActuator> allMoodles;
+    private static MoodleActuator moodle;
+    private String webDriver = "webdriver.chrome.driver";
+    private String path = "C:\\Users\\eylon\\Downloads\\chromedriver_win32\\chromedriver.exe";
+    public void moodleInit() {
+        System.out.println("--------------- INITIALIZING MOODLE TEST - OPENING WEBPAGE ---------------");
+        if(allMoodles == null){
+            allMoodles = new ArrayList<>();
+        }
+        moodle = new MoodleActuator();
+        allMoodles.add(moodle);
+        moodle.initSession(webDriver, path);
     }
 
     @Given("user is on homepage")
@@ -47,5 +53,27 @@ public class StepDefinitions {
 
     @And("user submit the answer")
     public void userSubmitTheAnswer() {
+    }
+
+    @And("user edit the quiz question type")
+    public void userEditTheQuizQuestionType() {
+
+    }
+
+    @And("user save the quiz")
+    public void userSaveTheQuiz() {
+    }
+
+    @Then("the scenario passes")
+    public void theScenarioPasses() {
+    }
+
+    @Then("message displayed submit successfully")
+    public void messageDisplayedSubmitSuccessfully() {
+        
+    }
+
+    @Then("message displayed save successfully")
+    public void messageDisplayedSaveSuccessfully() {
     }
 }
