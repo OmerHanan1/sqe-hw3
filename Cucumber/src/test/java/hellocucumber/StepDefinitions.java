@@ -43,7 +43,7 @@ public class StepDefinitions {
     }
 
     @And("user navigate to the quiz page")
-    public void userNavigateToTheQuizPage() {
+    public void userNavigateToTheQuizPage() throws InterruptedException {
         moodle.navigateToQuiz();
     }
 

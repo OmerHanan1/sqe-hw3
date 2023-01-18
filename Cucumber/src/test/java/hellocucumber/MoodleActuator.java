@@ -54,12 +54,8 @@ public class MoodleActuator {
         driver.findElement(By.id("loginbtn")).click();
     }
 
-    public void navigateToQuiz(){
-        driver.findElement(By.linkText("My courses")).click();
-        // click on the first course "testCourse" twice
-        driver.findElement(By.linkText("testCourse")).click();
-        // wait until the page is loaded
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("testQuiz")));
-        driver.findElement(By.linkText("testQuiz")).click();
+    public void navigateToQuiz() throws InterruptedException {
+        // navigate to the quiz page url
+        driver.get("http://127.0.0.1/mod/quiz/view.php?id=2");
     }
 }
