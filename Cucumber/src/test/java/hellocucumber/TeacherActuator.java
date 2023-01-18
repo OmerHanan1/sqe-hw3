@@ -14,7 +14,7 @@ import java.time.Duration;
 import java.util.Random;
 import static org.openqa.selenium.support.ui.ExpectedConditions.numberOfWindowsToBe;
 
-public class MoodleActuator {
+public class TeacherActuator {
     private WebDriver driver;
     private WebDriverWait wait;
     public void initSession(String webDriver, String path){
@@ -117,9 +117,5 @@ public class MoodleActuator {
         defaultgrade.sendKeys(Keys.ENTER);
 
         driver.findElement(By.xpath("//div[4]/div[2]/fieldset[1]/div[1]/div[1]/span[1]/input[1]")).click();
-    }
-
-    public void success() {
-        System.out.println("Test passed");
     }
 }
