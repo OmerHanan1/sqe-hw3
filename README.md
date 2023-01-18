@@ -2,51 +2,54 @@
 This is a repository for assignment 3 of the Software Quality Engineering course at the [Ben-Gurion University](https://in.bgu.ac.il/), Israel.
 
 ## Assignment Description
-In this assignment, we tested an open-source software called [$$*TODO* software name$$](https://address-of-the-project.com).
+In this assignment, we tested an open-source software called [Moodle](https://moodle.org/?lang=he).
 
-$$*TODO* Add some general description about the software$$
+This software provides the user with a platform for creating online courses and learning management systems.
+The software is written in PHP and uses a MySQL database.
+Users can create courses, add activities and resources, and grade students' work.
+User types include students, teachers, and administrators.
+We tested the software using the [Selenium](https://www.selenium.dev/) framework.
 
 ## Installation
-$$*TODO* Write instructions on how to install the software and prepare the testing environment$$
+In order to run the tests, you need to install the following:
+* [Moodle](https://download.moodle.org/releases/latest/) - The software we tested.
+* [Selenium](https://www.selenium.dev/downloads/) - The framework we used to test the software.
+* [ChromeDriver](https://chromedriver.chromium.org/downloads) - The driver we used to run the tests on Chrome.
+* [MySQL](https://dev.mysql.com/downloads/mysql/) - The database we used to store the data.
+* [XAMPP](https://www.apachefriends.org/download.html) - The software we used to run the database.
+* [IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=windows) - The IDE we used to write the tests.
+* [Java JDK](https://www.oracle.com/java/technologies/javase-downloads.html) - The language we used to write the tests.
+* [Maven](https://maven.apache.org/download.cgi) - The software we used to build the tests.
+* [Git](https://git-scm.com/downloads) - The software we used to manage the repository.
 
 ## What we tested
-$$*TODO* Add a description of the module and the user stories that you chose to test.
-For example, in the case of the Moodle example, you can write something like this:
+We tested the following feature:
+A student login to the system and register to a course.
+A student attempts to a quiz.
+The quiz contains a question with a multiple choice answer.
+The student answers the question and submits the quiz (the answer is correct and contains two answers).
+The student submits the quiz and the system displays the grade.
+A teacher login to the system and edit the quiz.
+The teacher change the question to a question with a single choice answer.
+The teacher saves the changes.
 
-We tested the quiz module that allows for creating and taking quizzes. We chose to test the following user stories: 
+The tests are located in the ```src/test/java```
 
-*User story:* A teacher adds a new quiz to the course with two yes/no questions
+*User story:* As a student, I want to register to a course, attempt a quiz, and submit the quiz.
 
-*Preconditions:* There is a course with a teacher
+*Preconditions:* The student submits the quiz and the system displays the grade.
 
-*Expected outcome:* The quiz is added to the course.
+*Expected outcome:* The student submits the quiz and the system displays the grade.
 
-*User story:* A students attempts a quiz and answers correctly.
+*User story:* A teacher login to the system and edit the quiz.
 
-*Preconditions:* There is a course with a quiz with two yes/no questions and the quiz grade is calculated automatically and the grade is visible to the students upon submission.
+*Preconditions:* The teacher change the question to a question with a single choice answer.
 
-*Expected outcome:* The student receives 100.
-$$
+*Expected outcome:* The answer cannot be changed to a single choice answer since the quiz is already submitted.
 
 ## How we tested
 We used two different testing methods:
 1. [Cucumber](https://cucumber.io/), a BDD testing framework.
 2. [Provengo](https://provengo.tech/), a story-based testing framework.
 
-Each of the testing methods is elaborated in its own directory. 
-
-## Results
-Update all README.md files (except for d-e, see Section 1). Specifically, replace all $$*TODO*…$$ according to the instructions inside the $$.
-
-## Detected Bugs
-We detected the following bugs:
-
-1. Bug 1: 
-   1. General description: ...
-   2. Steps to reproduce: ...
-   3. Expected result: ...
-   4. Actual result: ...
-   5. Link to the bug report: (you are encouraged to report the bug to the developers of the software)
-2. Bug 2: ...
-
-$$*TODO* if you did not detect the bug, you can delete this section$$  
+Each of the testing methods is elaborated in its own directory.

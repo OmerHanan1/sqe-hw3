@@ -14,12 +14,12 @@ import java.time.Duration;
 import java.util.Random;
 import static org.openqa.selenium.support.ui.ExpectedConditions.numberOfWindowsToBe;
 
-public class MoodleActuator {
+public class TeacherActuator {
     private WebDriver driver;
     private WebDriverWait wait;
     public void initSession(String webDriver, String path){
         // webDriver = "webdriver.chrome.driver"
-        // path = "C:\University\Year C\Semester A\qa_course\assignment3\sqe-hw3\Selenium\chromedriver.exe";
+        // path = "C:\\Users\\eylon\\Downloads\\chromedriver_win32\\chromedriver.exe";
         System.setProperty(webDriver, path);
 
         // new chrome driver object
@@ -60,10 +60,6 @@ public class MoodleActuator {
     }
 
     public void selectQuiz() {
-<<<<<<< HEAD
-        // select the quiz
-        driver.findElement(By.xpath("btn btn-primary")).click();
-=======
         // click the attempt quiz button
         driver.findElement(By.xpath("//form[1]/button[1]")).click();
     }
@@ -121,10 +117,5 @@ public class MoodleActuator {
         defaultgrade.sendKeys(Keys.ENTER);
 
         driver.findElement(By.xpath("//div[4]/div[2]/fieldset[1]/div[1]/div[1]/span[1]/input[1]")).click();
-    }
-
-    public void success() {
-        System.out.println("Test passed");
->>>>>>> a96eacbda15a8a1d0406a872f21abc1c4fea2d67
     }
 }

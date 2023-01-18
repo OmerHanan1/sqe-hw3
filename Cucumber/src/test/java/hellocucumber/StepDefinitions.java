@@ -4,6 +4,7 @@ import io.cucumber.java.en.*;
 
 import org.junit.jupiter.api.Assertions.*;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -54,16 +55,17 @@ public class StepDefinitions {
 
     @And("user answer the question")
     public void userAnswerTheQuestion() {
-        
+        moodle.answerQuestion();
     }
 
     @And("user submit the answer")
-    public void userSubmitTheAnswer() {
+    public void userSubmitTheAnswer() throws AWTException {
+        moodle.submitAnswer();
     }
 
     @And("user edit the quiz question type")
     public void userEditTheQuizQuestionType() {
-
+        moodle.editQuizQuestionType();
     }
 
     @And("user save the quiz")
@@ -72,14 +74,18 @@ public class StepDefinitions {
 
     @Then("the scenario passes")
     public void theScenarioPasses() {
+        // scenario passes
+        moodle.success();
     }
 
     @Then("message displayed submit successfully")
     public void messageDisplayedSubmitSuccessfully() {
-        
+        moodle.submittedsuccessfully();
     }
 
     @Then("message displayed save successfully")
     public void messageDisplayedSaveSuccessfully() {
+        // scenario passes
+        moodle.success();
     }
 }

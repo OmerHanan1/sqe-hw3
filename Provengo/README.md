@@ -1,5 +1,5 @@
-# Testing $$*TODO* software name$$ using Provengo
-This directory contains the Provengo project for testing $$*TODO* software name$$.
+# Testing Moodle using Provengo
+This directory contains the Provengo project for testing Moodle.
 
 $$*TODO* 
 1. replace the name of the folder 'helloprovengo' with the name of your software (use underscore/title case to avoid spaces)
@@ -37,9 +37,11 @@ provengo run --show-sessions helloprovengo
 ### Story files
 The test stories are in [Tests.story.js](helloprovengo/spec/js/RunTest.story.js). See the file for a detailed description of the stories.
 
-$$*TODO*: Make sure that the text inside the file is informative, self-explanatory, and properly writen (meaningful variable names, no magic number, etc.). Specifically, write for each story a comment that explain what it does and make sure that the story's name reflects its purpose. See the file for an example.$$
-
 ### Events definition files
+<<<<<<< HEAD
 The specification for the events are given in [EventDef.js](helloprovengo/spec/js/RunTest.EventDef.js). See the file for a detailed description of the events.
 
 $$*TODO* Make sure that each event is documented and properly writen (meaningful variables and events names, no magic number, etc.). See the file for an example.$$
+=======
+The specification for the events are given in [EventDef.js](helloprovengo/spec/js/OrderPizza.EventDef.js). See the file for a detailed description of the events.
+>>>>>>> a96eacbda15a8a1d0406a872f21abc1c4fea2d67
