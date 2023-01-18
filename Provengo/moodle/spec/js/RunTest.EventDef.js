@@ -29,7 +29,6 @@ defineEvent(SeleniumSession, "StartQuiz", function(session, e) {
     session.click("//form[1]/button[1]")
 })
 
-
 /**
  *  STUDENT
  */
