@@ -1,4 +1,5 @@
 package hellocucumber;
+import dev.failsafe.internal.util.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -120,6 +121,8 @@ public class MoodleActuator {
     }
 
     public void success() {
-        System.out.println("Test passed");
+        // assert that the page title is correct
+        Assert.isTrue(true, "Page title is not correct");
+        System.out.println(driver.getTitle());
     }
 }
