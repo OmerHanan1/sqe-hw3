@@ -60,7 +60,7 @@ public class MoodleActuator {
     }
 
     public void selectQuiz() {
-        // select the quiz
-        driver.findElement(By.linkText("Attempt quiz")).click();
+        // click the attempt quiz button
+        driver.findElement(By.xpath("//button[@type=\"submit\"]")).click();
     }
 }
